@@ -1,0 +1,48 @@
+name       : ptlib
+version    : 2.10.10
+release    : 1
+source     :
+    - http://ftp.gnome.org/pub/gnome/sources/ptlib/2.10/ptlib-2.10.10.tar.xz : 7fcaabe194cbd3bc0b370b951dffd19cfe7ea0298bfff6aecee948e97f3207e4
+license    : MPL-1
+summary    : PTLib (Portable Tools Library) is a library for I/O portability, multi-threading portability, and more.
+description: |
+    PTLib (Portable Tools Library) is a library for I/O portability, multi-threading portability, aid in producing unix daemons and NT services portably and all sorts of internet protocols
+builddeps  :
+    - pkgconfig(alsa)
+    - pkgconfig(expat)
+    - pkgconfig(krb5)
+    - pkgconfig(libdc1394-2)
+    - pkgconfig(libdv)
+    - pkgconfig(libpulse)
+    - pkgconfig(libraw1394)
+    - pkgconfig(libsasl2)
+    - pkgconfig(libv4l2)
+    - pkgconfig(lua-5.1)
+    - pkgconfig(openssl)
+    - pkgconfig(sdl)
+    - pkgconfig(sdl2)
+    - bison
+    - flex
+libsplit : no
+setup      : |
+    %configure --disable-static \
+        --enable-audio \
+        --enable-configfile \
+        --enable-ftp \
+        --enable-http \
+        --enable-ipv6 \
+        --enable-opal \
+        --enable-oss \
+        --enable-plugins \
+        --enable-pulse \
+        --enable-sasl \
+        --enable-soap \
+        --enable-socks \
+        --enable-v4l \
+        --enable-v4l2 \
+        --enable-video \
+build      : |
+    %make
+install    : |
+    %make_install
+    rm %libdir%/*.a
