@@ -1,11 +1,12 @@
 name       : ptlib
 version    : 2.10.11
-release    : 2
+release    : 3
 source     :
     - http://ftp.gnome.org/pub/gnome/sources/ptlib/2.10/ptlib-2.10.11.tar.xz : 3a17f01d66301663f76130b425d93c2730f2a33df666982165166ff4653dc2c9
 license    : MPL-1
 component  : programming
-summary    : PTLib (Portable Tools Library) is a library for I/O portability, multi-threading portability, and more.
+summary    : PTLib (Portable Tools Library) is a library for I/O portability, multi-threading
+    portability, and more.
 description: |
     PTLib (Portable Tools Library) is a library for I/O portability, multi-threading portability, aid in producing unix daemons and NT services portably and all sorts of internet protocols
 builddeps  :
