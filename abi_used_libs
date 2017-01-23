@@ -1,0 +1,15 @@
+libSDL-1.2.so.0
+libasound.so.2
+libc.so.6
+libcrypto.so.1.0.0
+libdl.so.2
+libexpat.so.1
+libgcc_s.so.1
+liblua.so.5.1
+libpthread.so.0
+libpulse.so.0
+libresolv.so.2
+librt.so.1
+libssl.so.1.0.0
+libstdc++.so.6
+libv4l2.so.0

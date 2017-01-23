@@ -1,6 +1,6 @@
 name       : ptlib
 version    : 2.10.11
-release    : 3
+release    : 4
 source     :
     - http://ftp.gnome.org/pub/gnome/sources/ptlib/2.10/ptlib-2.10.11.tar.xz : 3a17f01d66301663f76130b425d93c2730f2a33df666982165166ff4653dc2c9
 license    : MPL-1
@@ -26,6 +26,7 @@ builddeps  :
     - bison
     - flex
 setup      : |
+    %patch -p1 < $pkgfiles/gcc6.patch
     %configure --disable-static \
         --enable-audio \
         --enable-configfile \
